@@ -45,7 +45,11 @@ func main() {
 		return
 	}
 
-	f5, _ := os.Create("f5.txt")
+	f5, err := os.Create("f5.txt")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 	n, err = io.WriteString(f5, string(s))
 	if err != nil {
 		fmt.Println(err)
