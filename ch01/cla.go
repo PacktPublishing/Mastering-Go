@@ -9,7 +9,7 @@ import (
 func main() {
 	if len(os.Args) == 1 {
 		fmt.Println("Please give one or more floats.")
-		os.Exit(1)
+		return
 	}
 
 	arguments := os.Args
