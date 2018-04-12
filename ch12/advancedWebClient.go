@@ -49,7 +49,7 @@ func main() {
 	}
 
 	if httpData.ContentLength == -1 {
-		fmt.Println("ContentLength in unknown!")
+		fmt.Println("ContentLength is unknown!")
 	} else {
 		fmt.Println("ContentLength:", httpData.ContentLength)
 	}
