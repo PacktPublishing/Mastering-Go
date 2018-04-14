@@ -24,12 +24,10 @@ func timeHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	PORT := ":8001"
 	arguments := os.Args
-	if len(arguments) == 1 {
-		fmt.Printf("Listening on http://0.0.0.0%s\n", PORT)
-	} else {
+	if len(arguments) != 1 {
 		PORT = ":" + arguments[1]
-		fmt.Printf("Listening on http://0.0.0.0%s\n", PORT)
 	}
+	fmt.Println("Using port number:", PORT)
 
 	m := http.NewServeMux()
 	srv := &http.Server{
