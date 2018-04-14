@@ -182,11 +182,10 @@ func main() {
 
 	PORT := ":8001"
 	arguments := os.Args
-	if len(arguments) == 1 {
-		fmt.Println("Using default port number: ", PORT)
-	} else {
+	if len(arguments) != 1 {
 		PORT = ":" + arguments[1]
 	}
+	fmt.Println("Using port number: ", PORT)
 
 	http.HandleFunc("/", homePage)
 	http.HandleFunc("/change", changeElement)
