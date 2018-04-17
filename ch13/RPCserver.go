@@ -9,7 +9,7 @@ import (
 	"sharedRPC"
 )
 
-type MyInterface int
+type MyInterface struct{}
 
 func Power(x, y float64) float64 {
 	return math.Pow(x, y)
