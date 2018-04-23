@@ -31,7 +31,6 @@ func main() {
 
 	http.HandleFunc("/time", timeHandler)
 	http.HandleFunc("/", myHandler)
-
 	err := http.ListenAndServe(PORT, nil)
 	if err != nil {
 		fmt.Println(err)
