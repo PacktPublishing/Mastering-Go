@@ -14,7 +14,7 @@ func a() {
 	fmt.Println("About to call b()")
 	b()
 	fmt.Println("b() exited!")
-	fmt.Println("Exiting a()")
+	fmt.Println("Exiting a().")
 }
 
 func b() {
