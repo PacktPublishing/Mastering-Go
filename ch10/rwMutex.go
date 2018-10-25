@@ -11,7 +11,6 @@ var Password = secret{password: "myPassword"}
 
 type secret struct {
 	RWM      sync.RWMutex
-	M        sync.Mutex
 	password string
 }
 
@@ -32,10 +31,10 @@ func show(c *secret) string {
 }
 
 func showWithLock(c *secret) string {
-	c.M.Lock()
+	c.RWM.Lock()
 	fmt.Println("showWithLock")
 	time.Sleep(3 * time.Second)
-	defer c.M.Unlock()
+	defer c.RWM.Unlock()
 	return c.password
 }
 
