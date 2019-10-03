@@ -7,11 +7,10 @@ import (
 
 func returnError(a, b int) error {
 	if a == b {
-		err := errors.New("Error in returnError() function!")
+		err := errors.New("error in returnError() function")
 		return err
-	} else {
-		return nil
 	}
+	return nil
 }
 
 func main() {
