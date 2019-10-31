@@ -1,0 +1,11 @@
+#ignore all files
+*
+
+#except files with next extensions
+!*.go
+!*.md
+!*.db
+!*.xml
+!*.c
+!*.h
+!*.sample
